@@ -1,0 +1,94 @@
+http://wwwhome.cs.utwente.nl/~hiemstra/papers/thesis.pdf
+http://ciir.cs.umass.edu/pubfiles/ir-171.pdf
+http://nlp.cs.swarthmore.edu/~richardw/papers/hiemstra2000-relating.pdf
+http://www.ccs.neu.edu/home/jaa/IS4200.10X1/Handouts/language.pdf
+https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/hiemstra_sigir04.pdf
+http://times.cs.uiuc.edu/czhai/pub/slmir-now.pdf
+
+http://wwwhome.cs.utwente.nl/~hiemstra/papers/thesis.pdf
+
+the language retrieval models
+Introduction
+	Information retrieval is the name of the process or method whereby
+a prospective user of information is able to convert his need for
+information into an actual list of citations to documents in storage
+containing information useful to him.
+	The goal of an information retrieval (IR) system is to rank documents
+optimally given a query so that relevant documents would be ranked
+above nonrelevant ones. In order to achieve this goal, the system must
+be able to score documents so that a relevant document would ideally
+have a higher score than a nonrelevant one.
+
+the language model 
+	A short history of language models
+	Statistical language models have been around for quite a long time. They were
+first applied by Andrei Markov at the beginning of the 20th century to model
+letter sequences in works of Russian literature (Manning and Sch¨utze 1999).
+Another famous application of language models are Claude Shannon’s models of
+letter sequences and word sequences, which he used to illustrate the implications
+of coding and information theory (Shannon 1948). Later, statistical language
+models were developed as a general natural language processing tool. Language
+models were first successfully used for automatic speech recognition at the end of
+the 1970’s. The by now standard model of automatic speech recognition consists
+of two parts. The first part is the language model, that predicts the next word in
+continuous speech. The second part models the acoustic signal and is therefore
+called the acoustic model. The theory behind the speech recognition models is part of hidden Markov model theory (indeed, a ‘hidden’ version of Markov’s
+models) that was developed by Leonard Baum and his colleagues at IBM in
+the late 1960s and early 1970s (Rabiner 1990; Jelinek 1997). Recently, hidden
+Markov models are studied as part of a general graphical model formalism,
+which subsumes many of the multivariate probabilistic models used in statistics,
+systems engineering, information theory and pattern recognition. Examples
+include Bayesian networks, Markov random fields, factor analysis and Kalman
+filters (Jordan 1998; Bengio 1999).
+	The application to information retrieval
+	Only very recently, since 1998, statistical language models are applied to information
+retrieval. The past two years show a remarkably large number of
+publications in which statistical language models are used to compute the ranking
+of documents given a query. To sum them up quickly: Ponte and Croft
+(1998) were the first to suggest the use of language models in information retrieval.
+They used estimation based on risk functions to overcome the problem
+of small sample sizes. Hiemstra (1998a) and Hiemstra and Kraaij (1999) were
+the first to introduce ranking based on a mixture of global and local probability
+distributions that is also used in the publications mentioned in the remainder of
+this paragraph. Miller, Leek, and Schwartz (1999) use hidden Markov models
+for ranking, including the use of bi-grams to model two word phrases and a
+method for performing blind feedback. Sahami (1999) suggested an approach
+to document clustering based on smoothing the document models by using the
+geometric mean of the global and local distributions. Berger and Lafferty (1999)
+and Hiemstra and De Jong (1999) developed a model that includes statistical
+translation. Ng (2000) introduced a model that uses the ratio of the conditional
+probability of the query given the document and the prior probability of the
+query, including a method for query expansion. Song and Croft (1999) used a
+model which includes bi-grams and introduced Good Turing re-estimation to
+smooth the document models. This chapter will address details of many of the
+above mentioned publications. They will be recited where appropriate in the
+following sections. It is assumed that the reader is familiar with the basics of
+probability theory as for instance presented by Mood and Graybill (1963).
+
+the language model for information retrieval
+	 Two models of information retrieval processes
+	This chapter will introduce two models of information retrieval: a basic retrieval
+model and an extension of the basic model, the statistical translation retrieval
+model. The basic model defines the system’s matching process. It has the same
+function as the models presented in chapter 2. The extended model adds statistical
+translation to the basic retrieval model to model both the matching process
+and the query formulation process. Because today’s computers are still not able
+to really understand the documents and the user’s request, both matching and
+query formulation are modelled by simple probability mechanisms. Matching
+is modelled by the generation of a random query from a relevant document
+
+Summary
+
+
+References
+[1] ChengXiang Zhai, “Statistical Language Models for Information Retrieval 
+A Critical Review,” Foundations and Trends® in Information Retrieval Vol. 2, No. 3 (2008) 137–213. 
+
+[2] Djoerd Hiemstra and Stephen Robertson, and Hugo Zaragoza, “Parsimonious Language Models for Information Retrieval,” in Proceedings of ACM SIGIR 2007, pp. 15–22, 2007.
+[3] Djoerd Hiemstra and Arjen P. de Vries, “Relating the new language models of information
+retrieval to the traditional retrieval models,” University of Twente, CTIT
+P.O. Box 217, 7500 AE Enschede The Netherlands.
+[4] Djoerd Hiemstra, “Using language models,
+for information retrieval,” Grafisch Centrum Twente,Second printing, January 2001.
+[5] Fei Song and W. Bruce Croft, “A General Language Model for Information Retrieval,”
+in Proceedings of TREC 1999, 1999.
